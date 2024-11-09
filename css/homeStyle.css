@@ -1,0 +1,422 @@
+header .container {
+    width: 100%;
+    background-color: white;
+    height: 4.3rem;
+}
+
+header .container ul {
+    gap: 1rem;
+    font-size: large;
+}
+
+header .container ul a {
+    color: var(--light-color);
+}
+
+header .container .logo img {
+    height: 6rem;
+}
+
+header .container nav ul li a {
+    transition: color 0.3s;
+}
+
+header .container nav ul li a::after {
+    content: " ";
+    display: block;
+    height: 3px;
+    margin-top: 2px;
+    background-color: var(--primary-pink);
+    transition: width 0.5s ease;
+    width: 0;
+}
+
+header nav ul li a.active::after {
+    width: 100%;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* main */
+
+.hero-sec {
+    height: 90vh;
+    background-image: url(../images/beautiful-flowers-wooden-background.webp.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: -webkit-optimize-contrast;
+    position: relative;
+}
+
+.content {
+    width: 30rem;
+    position: absolute;
+    top: 11rem;
+    left: 12rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+
+.hero-sec .content.show {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.hero-sec .content h1 {
+    letter-spacing: 2px;
+}
+
+.hero-sec h2 {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    margin: 8px 0 20px 0;
+    color: var(--primary-pink);
+}
+
+button.btn {
+    margin-top: 2rem;
+    background-color: var(--primary-pink);
+    border: none;
+    border-radius: 60px;
+    padding: 15px;
+    min-height: 30px;
+    min-width: 120px;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+button.btn:hover {
+    font-weight: var(--font-boldy);
+    background-color: var(--dark);
+    color: var(--white);
+    border: none;
+}
+
+/* About */
+.about {
+    margin: 10rem;
+}
+
+.about .aboutHeader {
+    text-align: center;
+    background-color: hsla(339, 81%, 94%, 0.704);
+    margin-bottom: 3REM;
+    padding: 15px 0;
+    font-size: 2rem;
+    color: rgb(239, 58, 149);
+
+}
+
+.about .about-content video {
+    width: 30rem;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.about .about-content .reason {
+    width: 30rem;
+    line-height: 2rem;
+}
+
+.about .about-content .reason h3 {
+    margin-bottom: 1rem;
+    font-size: 2.3rem;
+}
+
+.about .about-content .reason p {
+    color: var(--light-gray);
+    font-size: 16px;
+}
+
+/* features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 4rem 10.5rem;
+    background-color: var(--background-gray);
+}
+
+.features .back {
+    background-color: var(--lighter-gray);
+    padding: 1rem;
+    border-radius: 7px;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 150px;
+}
+
+.features .back i {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.features .back span {
+    color: var(--light-color);
+}
+
+
+/* products */
+.products {
+    margin: 10rem;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.products .prodHeader {
+    text-align: center;
+    /* background-color: var(--primary-pink); */
+    background-color: hsla(339, 81%, 94%, 0.704);
+    margin-bottom: 3REM;
+    padding: 15px 0;
+    font-size: 2rem;
+    color: rgb(239, 58, 149);
+}
+.product-grid {
+    display: grid;
+    grid-template-areas:
+        "discount"
+        "image"
+        "name"
+        "price";
+    justify-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-grid.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.discount {
+    grid-area: discount;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.product-image {
+    grid-area: image;
+    border-radius: 8px;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+.icons {
+    position: absolute;
+    text-align: center;
+    background-color: hsl(336, 100%, 70%);
+    bottom: 8rem;
+    left: 1.3rem;
+    right: 1.3rem;
+    padding: 0.6rem 0 ;
+    opacity: 0;
+    transition: opacity 1s ease; 
+    visibility: hidden;
+}
+.icons a {
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold; 
+}
+.icons a i {
+    font-size: 20px;
+}
+.Cart {
+    margin: 0 10px; 
+    border-left: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+}
+.product-grid:hover .image .icons{
+    opacity: 1;
+    visibility: visible;
+}
+.product-name {
+    grid-area: name;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.product-price {
+    grid-area: price;
+    color: #2ecc71;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* review */
+.review {
+    margin: 10rem;
+}
+
+.review .viewHeader {
+    text-align: center;
+    background-color: hsla(339, 81%, 94%, 0.704);
+    margin-bottom: 3rem;
+    padding: 15px 0;
+    font-size: 2rem;
+    color: hsl(330, 85%, 58%);
+
+}
+.listOfReview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.review-grid {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.review-grid.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rating .checked {
+    color: orange;
+}
+
+.review-grid .user {
+    gap: 1.3rem;
+}
+
+.review-grid p {
+    margin: 1rem 0;
+}
+
+.review-grid .user img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-grid .user .person-info span {
+    color: var(--light-gray);
+}
+
+
+/* contact */
+.contact {
+    margin: 10rem;
+}
+
+.contact .contactHeader {
+    text-align: center;
+    background-color: hsla(339, 81%, 94%, 0.704);
+    margin-bottom: 3rem;
+    padding: 15px 0;
+    font-size: 2rem;
+    color: rgb(239, 58, 149);
+
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 35rem;
+    padding: 5rem 3rem;
+}
+
+.contact form input {
+    padding: 1rem;
+}
+
+.contact form textarea {
+    padding: 1rem 1rem 5rem 1rem;
+}
+
+.contact .contact-content img {
+    width: 28rem;
+    margin-bottom: 5rem;
+    border-radius: 5rem;
+}
+
+/* footer */
+footer {
+    margin: 10rem 10rem 3rem 11rem;
+
+}
+
+footer .links {
+    align-items: flex-start;
+}
+
+footer .links h3 {
+    margin-bottom: 1rem;
+}
+
+footer .links .contact-info li>ul {
+    display: flex;
+    gap: 0.4rem;
+}
+
+footer ul>li>ul>li>a>img {
+    width: 1.8rem;
+    height: 1rem;
+}
+
+footer .links div ul>li {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+footer .links div ul>li:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+footer .designer-name {
+    color: var(--primary-pink);
+    font-weight: bold;
+}
+
+footer .designer-name:hover {
+    text-decoration: underline;
+
+}
