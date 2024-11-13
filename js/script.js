@@ -64,3 +64,15 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', handleScroll);
 });
 
+
+// responsive header
+
+const navToggler = document.getElementById("nav-toggler");
+const navList = document.querySelector(".nav-list");
+
+navToggler.addEventListener("click", () => {
+    navList.classList.toggle("show");
+});
+
+
+

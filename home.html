@@ -7,9 +7,13 @@
     <meta name="description" content="E-Commerce Flower Shop Website">
     <meta name="author" content="Razan">
     <title>Rozy</title>
+    
+    <!-- CSS links -->
     <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/homeStyle.css">
+    <link rel="stylesheet" href="./css/homeStyle.css" />
     <link rel="stylesheet" href="./css/all.min.css" />
+
+    <!-- Favicon -->
     <link rel="icon" href="./images/logo.webp.png">
 </head>
 
@@ -17,384 +21,381 @@
     <header>
         <div class="container row">
             <div class="logo">
-                <a href=""><img src="./images/logo.webp.png" alt=""></a>
+                <a href="#"><img src="./images/logo.webp.png" alt="Logo" loading="lazy"></a>
             </div>
             <nav>
-                <ul class="row">
-                    <li><a href="" aria-label="Home page" class="active hover-opacity">Home</a></li>
-                    <li><a href="" aria-label="About us" class="hover-opacity">About</a></li>
-                    <li><a href="" aria-label="Our Products" class="hover-opacity">Product</a></li>
-                    <li><a href="" aria-label="Reviews" class="hover-opacity">Review</a></li>
-                    <li><a href="" aria-label="Contact Us" class="hover-opacity">Contact</a></li>
+                <ul class="row nav-list">
+                    <li><a class="trans-head" href="#">Home</a></li>
+                    <li><a class="trans-head" href="#">About</a></li>
+                    <li><a class="trans-head" href="#">Product</a></li>
+                    <li><a class="trans-head" href="#">Review</a></li>
+                    <li><a class="trans-head" href="#">Contact</a></li>
                 </ul>
             </nav>
-            <div class="header-links">
-                <ul class="row">
-                    <li><a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a></li>
-                    <li><a href=""><i class="fa-solid fa-cart-shopping" aria-label="cart shopping"></i></a></li>
-                    <li><a href=""><i class="fa-solid fa-circle-user" aria-label="Account"></i></a></li>
-                </ul>
+            <div class="header-links row">
+                <a class="trans-head" href="#"><i class="fa-solid fa-heart" aria-label="Favourites"></i></a>
+                <a class="trans-head" href="#"><i class="fa-solid fa-cart-shopping" aria-label="Cart"></i></a>
+                <a class="trans-head" href="#"><i class="fa-solid fa-circle-user" aria-label="Account"></i></a>
             </div>
+
+            <button id="nav-toggler"><i class="fa-solid fa-bars"></i></button>
         </div>
     </header>
 
     <main>
-        <div class="container">
-            <section class="hero-sec">
-                <div class="content">
-                    <h1>Fresh Flowers</h1>
-                    <h2>Natural & Beautiful Flowers</h2>
-                    <p>Our flowers are natural, fresh, and selected for their quality. Each bloom fills your space with
-                        a delightful fragrance. Enjoy long-lasting freshness perfect for any occasion.</p>
-                    <button class="btn" aria-label="Shop Now">Shop Now</button>
-                </div>
-            </section>
-            <section class="about">
-                <h2 class="aboutHeader typing-effect"><span>About</span> Us</h2>
-                <div class="about-content row">
-                    <video class="my-video" autoplay loop muted>
-                        <source src="./images/video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="reason">
-                        <h3>Why Choose Us</h3>
-                        <p>Our platform offers beautiful, fresh floral arrangements crafted with care by expert
-                            florists. We ensure quality in every bouquet, reliable delivery, and personalized service to
-                            make every occasion special. Choose us for blooms that brighten moments and bring joy.
-                        </p>
-                        <br>
-                        <p>With a team of passionate florists, we design each bouquet with attention to detail and a
-                            love for flowers, Choose us to experience the finest in floral artistry and dedicated
-                            customer care. </p>
-                        <button class="btn" aria-label="Learn more">Learn More</button>
-                    </div>
-                </div>
-            </section>
-            <section class="features row">
-                <div class="feat1 back row">
-                    <i class="fa-solid fa-truck" aria-label="free delivery"></i>
-                    <div class="advant">
-                        <h4>Free Shipping</h4>
-                        <span>On All Orders</span>
-                    </div>
-                </div>
-                <div class="feat2 back row">
-                    <i class="fa-solid fa-sack-dollar" aria-label="Moneyback Garantee"></i>
-                    <div class="advant">
-                        <h4>10 Days Returns</h4>
-                        <span>Moneyback Garantee</span>
-                    </div>
-                </div>
-                <div class="feat3 back row">
-                    <i class="fa-solid fa-gift" aria-label="having gifts"></i>
-                    <div class="advant">
-                        <h4>Offer & Gift</h4>
-                        <span>On All Orders</span>
-                    </div>
-                </div>
-                <div class="feat4 back row">
-                    <i class="fa-solid fa-file-signature" aria-label="Secure Payment"></i>
-                    <div class="advant">
-                        <h4>Secure Payment</h4>
-                        <span>Protected By Paypal</span>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="products">
-                <h2 class="prodHeader typing-effect fade-in-typing">Lates Products</h2>
-                <div class="listOfCard">
-                    <div class="products-container">
-                        <div class="product-grid">
-                            <span class="discount">-20%</span>
-                            <div class="image">
-                                <img src="./images/1.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
-                                <div class="icons ">
-                                    <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
-                                    <a href="" class="Cart">Add To Cart</a>
-                                    <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
-                                </div>
-                            </div>
-                            <h3 class="product-name">Product Name</h3>
-                            <p class="product-price">$49.99</p>
-                        </div>
+        <!-- hero Section -->
+        <section class="hero-sec" id="hero-section">
+            <div class="content show">
+                <h1>Fresh Flowers</h1>
+                <h2>Natural & Beautiful Flowers</h2>
+                <p>Our flowers are natural, fresh, and selected for their quality. Each bloom fills your space with
+                    a delightful fragrance. Enjoy long-lasting freshness perfect for any occasion.</p>
+                <button class="btn" aria-label="Shop Now">Shop Now</button>
+            </div>
+        </section>
 
-                        <div class="product-grid">
-                            <span class="discount">-15%</span>
-                            <div class="image">
-                                <img src="./images/2.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
-                                <div class="icons ">
-                                    <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
-                                    <a href="" class="Cart">Add To Cart</a>
-                                    <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
-                                </div>
+        <!-- About Section -->
+        <section class="about" id="about-us">
+            <div class="Subject typing-effect">About Us</div>
+            <div class="about-content row">
+                <video class="my-video" autoplay loop muted>
+                    <source src="./images/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="reason">
+                    <h3>Why Choose Us</h3>
+                    <p>Our platform offers beautiful, fresh floral arrangements crafted with care by expert
+                        florists. We ensure quality in every bouquet, reliable delivery, and personalized service to
+                        make every occasion special. Choose us for blooms that brighten moments and bring joy.
+                    </p>
+                    <br>
+                    <p>With a team of passionate florists, we design each bouquet with attention to detail and a
+                        love for flowers, Choose us to experience the finest in floral artistry and dedicated
+                        customer care. </p>
+                    <button class="btn" aria-label="Learn more">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="back">
+                <i class="fa-solid fa-truck" aria-label="free delivery"></i>
+                <h4>Free Shipping</h4>
+                <span>On All Orders</span>
+            </div>
+            
+            <div class="back">
+                <i class="fa-solid fa-sack-dollar" aria-label="Moneyback Garantee"></i>
+                <h4>10 Days Returns</h4>
+                <span>Moneyback Garantee</span>
+            </div>
+
+            <div class="back">
+                <i class="fa-solid fa-gift" aria-label="having gifts"></i>
+                <h4>Offer & Gift</h4>
+                <span>On All Orders</span>
+            </div>
+            <div class="back">
+                <i class="fa-solid fa-file-signature" aria-label="Secure Payment"></i>
+                <h4>Secure Payment</h4>
+                <span>Protected By Paypal</span>
+            </div>
+        </section>
+
+        <!-- products Section -->
+        <section class="products" id="our-products">
+            <h2 class="Subject typing-effect fade-in-typing">Lates Products</h2>
+            <div class="listOfCard">
+                <div class="products-container">
+                    <div class="product-grid">
+                        <span class="discount">-20%</span>
+                        <div class="image">
+                            <img src="./images/1.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
+                            <div class="icons ">
+                                <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
+                                <a href="" class="Cart">Add To Cart</a>
+                                <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
                             </div>
-                            <h3 class="product-name">Another Product</h3>
-                            <p class="product-price">$39.99</p>
+                        </div>
+                        <h3 class="product-name">Product Name</h3>
+                        <p class="product-price">$49.99</p>
+                    </div>
+
+                    <div class="product-grid">
+                        <span class="discount">-15%</span>
+                        <div class="image">
+                            <img src="./images/2.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
+                            <div class="icons ">
+                                <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
+                                <a href="" class="Cart">Add To Cart</a>
+                                <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="product-name">Another Product</h3>
+                        <p class="product-price">$39.99</p>
+                    </div>
+                    
+                    <div class="product-grid">
+                        <span class="discount">-15%</span>
+                        <div class="image">
+                            <img src="./images/3.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
+                            <div class="icons ">
+                                <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
+                                <a href="" class="Cart">Add To Cart</a>
+                                <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
+                            </div>
                         </div>
                         
-                        <div class="product-grid">
-                            <span class="discount">-15%</span>
-                            <div class="image">
-                                <img src="./images/3.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
-                                <div class="icons ">
-                                    <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
-                                    <a href="" class="Cart">Add To Cart</a>
-                                    <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
-                                </div>
-                            </div>
-                            
-                            <h3 class="product-name">Another Product</h3>
-                            <p class="product-price">$39.99</p>
-                        </div>
+                        <h3 class="product-name">Another Product</h3>
+                        <p class="product-price">$39.99</p>
+                    </div>
 
-                        <div class="product-grid">
-                            <span class="discount">-15%</span>
-                            <div class="image">
-                               <img src="./images/4.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
-                                <div class="icons ">
-                                    <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
-                                    <a href="" class="Cart">Add To Cart</a>
-                                    <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
-                                </div>
+                    <div class="product-grid">
+                        <span class="discount">-15%</span>
+                        <div class="image">
+                           <img src="./images/4.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
+                            <div class="icons ">
+                                <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
+                                <a href="" class="Cart">Add To Cart</a>
+                                <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
                             </div>
-                            
-                            <h3 class="product-name">Another Product</h3>
-                            <p class="product-price">$39.99</p>
                         </div>
+                        
+                        <h3 class="product-name">Another Product</h3>
+                        <p class="product-price">$39.99</p>
+                    </div>
 
-                        <div class="product-grid">
-                            <span class="discount">-15%</span>
-                            <div class="image">
-                                <img src="./images/5.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
-                                <div class="icons ">
-                                    <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
-                                    <a href="" class="Cart">Add To Cart</a>
-                                    <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
-                                </div>
+                    <div class="product-grid">
+                        <span class="discount">-15%</span>
+                        <div class="image">
+                            <img src="./images/5.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
+                            <div class="icons ">
+                                <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
+                                <a href="" class="Cart">Add To Cart</a>
+                                <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
                             </div>
-                            
-                            <h3 class="product-name">Another Product</h3>
-                            <p class="product-price">$39.99</p>
                         </div>
+                        
+                        <h3 class="product-name">Another Product</h3>
+                        <p class="product-price">$39.99</p>
+                    </div>
 
-                        <div class="product-grid">
-                            <span class="discount">-15%</span>
-                            <div class="image">
-                                <img src="./images/6.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
-                                <div class="icons ">
-                                    <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
-                                    <a href="" class="Cart">Add To Cart</a>
-                                    <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
-                                </div>
+                    <div class="product-grid">
+                        <span class="discount">-15%</span>
+                        <div class="image">
+                            <img src="./images/6.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
+                            <div class="icons ">
+                                <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
+                                <a href="" class="Cart">Add To Cart</a>
+                                <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
                             </div>
-                            
-                            <h3 class="product-name">Another Product</h3>
-                            <p class="product-price">$39.99</p>
                         </div>
+                        
+                        <h3 class="product-name">Another Product</h3>
+                        <p class="product-price">$39.99</p>
+                    </div>
 
-                        <div class="product-grid">
-                            <span class="discount">-15%</span>
-                            <div class="image">
-                                <img src="./images/7.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
-                                <div class="icons ">
-                                    <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
-                                    <a href="" class="Cart">Add To Cart</a>
-                                    <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
-                                </div>
+                    <div class="product-grid">
+                        <span class="discount">-15%</span>
+                        <div class="image">
+                            <img src="./images/7.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
+                            <div class="icons ">
+                                <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
+                                <a href="" class="Cart">Add To Cart</a>
+                                <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
                             </div>
-                            <h3 class="product-name">Another Product</h3>
-                            <p class="product-price">$39.99</p>
                         </div>
+                        <h3 class="product-name">Another Product</h3>
+                        <p class="product-price">$39.99</p>
+                    </div>
 
-                        <div class="product-grid">
-                            <span class="discount">-15%</span>
-                            <div class="image">
-                                <img src="./images/8.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
-                                <div class="icons ">
-                                    <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
-                                    <a href="" class="Cart">Add To Cart</a>
-                                    <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
-                                </div>
+                    <div class="product-grid">
+                        <span class="discount">-15%</span>
+                        <div class="image">
+                            <img src="./images/8.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
+                            <div class="icons ">
+                                <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
+                                <a href="" class="Cart">Add To Cart</a>
+                                <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
                             </div>
-                            <h3 class="product-name">Another Product</h3>
-                            <p class="product-price">$39.99</p>
                         </div>
+                        <h3 class="product-name">Another Product</h3>
+                        <p class="product-price">$39.99</p>
+                    </div>
 
-                        <div class="product-grid">
-                            <span class="discount">-15%</span>
-                            <div class="image">
-                                <img src="./images/9.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
-                                <div class="icons ">
-                                    <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
-                                    <a href="" class="Cart">Add To Cart</a>
-                                    <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
-                                </div>
+                    <div class="product-grid">
+                        <span class="discount">-15%</span>
+                        <div class="image">
+                            <img src="./images/9.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
+                            <div class="icons ">
+                                <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
+                                <a href="" class="Cart">Add To Cart</a>
+                                <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
                             </div>
-                            
-                            <h3 class="product-name">Another Product</h3>
-                            <p class="product-price">$39.99</p>
                         </div>
+                        
+                        <h3 class="product-name">Another Product</h3>
+                        <p class="product-price">$39.99</p>
+                    </div>
 
-                        <div class="product-grid">
-                            <span class="discount">-15%</span>
-                            <div class="image">
-                                <img src="./images/10.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
-                                <div class="icons ">
-                                    <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
-                                    <a href="" class="Cart">Add To Cart</a>
-                                    <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
-                                </div>
+                    <div class="product-grid">
+                        <span class="discount">-15%</span>
+                        <div class="image">
+                            <img src="./images/10.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
+                            <div class="icons ">
+                                <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
+                                <a href="" class="Cart">Add To Cart</a>
+                                <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
                             </div>
-                            
-                            <h3 class="product-name">Another Product</h3>
-                            <p class="product-price">$39.99</p>
                         </div>
+                        
+                        <h3 class="product-name">Another Product</h3>
+                        <p class="product-price">$39.99</p>
+                    </div>
 
-                        <div class="product-grid">
-                            <span class="discount">-15%</span>
-                            <div class="image">
-                                <img src="./images/11.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
-                                <div class="icons ">
-                                    <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
-                                    <a href="" class="Cart">Add To Cart</a>
-                                    <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
-                                </div>
+                    <div class="product-grid">
+                        <span class="discount">-15%</span>
+                        <div class="image">
+                            <img src="./images/11.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
+                            <div class="icons ">
+                                <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
+                                <a href="" class="Cart">Add To Cart</a>
+                                <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
                             </div>
-                            <h3 class="product-name">Another Product</h3>
-                            <p class="product-price">$39.99</p>
                         </div>
+                        <h3 class="product-name">Another Product</h3>
+                        <p class="product-price">$39.99</p>
+                    </div>
 
-                        <div class="product-grid">
-                            <span class="discount">-15%</span>
-                            <div class="image">
-                                <img src="./images/12.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
-                                <div class="icons ">
-                                    <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
-                                    <a href="" class="Cart">Add To Cart</a>
-                                    <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
-                                </div>
+                    <div class="product-grid">
+                        <span class="discount">-15%</span>
+                        <div class="image">
+                            <img src="./images/12.webp.jpg" alt="Product Image" class="product-image" aria-label="product image" loading="lazy">
+                            <div class="icons ">
+                                <a href=""><i class="fa-solid fa-heart" aria-label="favourites"></i></a>
+                                <a href="" class="Cart">Add To Cart</a>
+                                <a href=""><i class="fas fa-share" aria-label="favourites"></i></a>
                             </div>
-                            <h3 class="product-name">Another Product</h3>
-                            <p class="product-price">$39.99</p>
                         </div>
+                        <h3 class="product-name">Another Product</h3>
+                        <p class="product-price">$39.99</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="review">
-                <h2 class="viewHeader typing-effect fade-in-typing">Customer Review</h2>
-                <div class="listOfReview">
-                    <div class="review-grid">
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <p class="comment">The flowers arrived fresh and beautifully arranged! Exceptional quality and
-                            prompt delivery. Highly recommended!</p>
-                        <div class="user row">
-                            <img src="./images/user1.jpg" alt="user picture" aria-label="user picture" loading="lazy">
-                            <div class="person-info">
-                                <h4>Razan Ibr</h4>
-                                <span>Happy customer</span>
-                            </div>
-                            <i class="fa-regular fa-bookmark"></i>
-                        </div>
+        <!-- review Section -->
+        <section class="review" id="customer-review">
+            <h2 class="Subject typing-effect fade-in-typing">Customer Review</h2>
+            <div class="listOfReview">
+                <div class="review-grid">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
                     </div>
-
-                    <div class="review-grid">
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
+                    <p class="comment">The flowers arrived fresh and beautifully arranged! Exceptional quality and
+                        prompt delivery. Highly recommended!</p>
+                    <div class="user row">
+                        <img src="./images/user1.jpg" alt="user picture" aria-label="user picture" loading="lazy">
+                        <div class="person-info">
+                            <h4>Razan Ibr</h4>
+                            <span>Happy customer</span>
                         </div>
-                        <p class="comment">Amazing selection and wonderful service! The bouquet was perfect and lasted
-                            over a week. </p>
-                        <div class="user row">
-                            <img src="./images/user2.jpg" alt="user picture" aria-label="user picture" loading="lazy">
-                            <div class="person-info">
-                                <h4>joe ferr</h4>
-                                <span>Happy customer</span>
-                            </div>
-                            <i class="fa-regular fa-bookmark"></i>
-                        </div>
-                    </div>
-
-                    <div class="review-grid">
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <p class="comment">Such a delightful experience! Ordering was easy, and the flowers brought so
-                            much joy. I’ll definitely order again!</p>
-                        <div class="user row">
-                            <img src="./images/user3.jpg" alt="user picture" aria-label="user picture" loading="lazy">
-                            <div class="person-info">
-                                <h4>salma ego</h4>
-                                <span>Happy customer</span>
-                            </div>
-                            <i class="fa-regular fa-bookmark"></i>
-                        </div>
-                    </div>
-                    <div class="review-grid">
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                        <p class="comment">Impressive quality and vibrant flowers! The whole experience from ordering to
-                            delivery was smooth and reliable. </p>
-                        <div class="user row">
-                            <img src="./images/user4.jpg" alt="user picture" aria-label="user picture" loading="lazy">
-                            <div class="person-info">
-                                <h4>Leo & lima</h4>
-                                <span>Happy couple</span>
-                            </div>
-                            <i class="fa-regular fa-bookmark"></i>
-                        </div>
+                        <i class="fa-regular fa-bookmark"></i>
                     </div>
                 </div>
-            </section>
 
-            <section class="contact">
-                <h2 class="contactHeader typing-effect fade-in-typing">Contact Us</h2>
-                <div class="contact-content row">
-                    <form action="">
-                        <input type="text" placeholder="Enter your name">
-                        <input type="text" placeholder="Enter your email">
-                        <input type="text" placeholder="Enter your number">
-                        <textarea placeholder="Massage"></textarea>
-                        <button class="btn" aria-label="Send Massages">Send Massage</button>
-                    </form>
-                    <img src="./images/contact.jpg" alt="" loading="lazy" aria-label="contact us">
+                <div class="review-grid">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p class="comment">Amazing selection and wonderful service! The bouquet was perfect and lasted
+                        over a week. </p>
+                    <div class="user row">
+                        <img src="./images/user2.jpg" alt="user picture" aria-label="user picture" loading="lazy">
+                        <div class="person-info">
+                            <h4>joe ferr</h4>
+                            <span>Happy customer</span>
+                        </div>
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
                 </div>
 
+                <div class="review-grid">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p class="comment">Such a delightful experience! Ordering was easy, and the flowers brought so
+                        much joy. I’ll definitely order again!</p>
+                    <div class="user row">
+                        <img src="./images/user3.jpg" alt="user picture" aria-label="user picture" loading="lazy">
+                        <div class="person-info">
+                            <h4>salma ego</h4>
+                            <span>Happy customer</span>
+                        </div>
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
+                </div>
+                <div class="review-grid">
+                    <div class="rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p class="comment">Impressive quality and vibrant flowers! The whole experience from ordering to
+                        delivery was smooth and reliable. </p>
+                    <div class="user row">
+                        <img src="./images/user4.jpg" alt="user picture" aria-label="user picture" loading="lazy">
+                        <div class="person-info">
+                            <h4>Leo & lima</h4>
+                            <span>Happy couple</span>
+                        </div>
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            </section>
-        </div>
+        <!-- contact Section -->
+        <section class="contact" id="contact-us">
+            <h2 class="Subject typing-effect fade-in-typing">Contact Us</h2>
+            <div class="contact-content row">
+                <form action="">
+                    <input type="text" placeholder="Enter your name">
+                    <input type="text" placeholder="Enter your email">
+                    <input type="text" placeholder="Enter your number">
+                    <textarea placeholder="Massage"></textarea>
+                    <button class="btn" aria-label="Send Massages">Send Massage</button>
+                </form>
+                <img src="./images/contact.jpg" alt="" loading="lazy" aria-label="contact us">
+            </div>
+        </section>
     </main>
-
 
     <footer>
         <div class="links row">
             <div class="quick-linls">
                 <h3>Quock Links</h3>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Product</a></li>
-                    <li><a href="">Review</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#hero-section">Home</a></li>
+                    <li><a href="#about-us">About</a></li>
+                    <li><a href="#our-products">Product</a></li>
+                    <li><a href="#customer-review">Review</a></li>
+                    <li><a href="#contact-us">Contact</a></li>
                 </ul>
             </div>
 
@@ -402,23 +403,21 @@
             <div class="extra-linls">
                 <h3>Extra Linls</h3>
                 <ul>
-                    <li><a href="">My Account</a></li>
-                    <li><a href="">My Order</a></li>
-                    <li><a href="">My Favourite</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">My Order</a></li>
+                    <li><a href="#">My Favourite</a></li>
                 </ul>
-                
             </div>
 
             <div class="locations">
                 <h3>Location</h3>
                 <ul>
-                    <li><a href="">Palestine</a></li>
-                    <li><a href="">Egypt</a></li>
-                    <li><a href="">Qatar</a></li>
-                    <li><a href="">England</a></li>
-                    <li><a href="">Italy</a></li>
+                    <li><a href="#">Palestine</a></li>
+                    <li><a href="#">Egypt</a></li>
+                    <li><a href="#">Qatar</a></li>
+                    <li><a href="#">England</a></li>
+                    <li><a href="#">Italy</a></li>
                 </ul>
-
             </div>
 
             <div class="contact-info">
@@ -441,7 +440,6 @@
         </div>
         <p>Created By <span class="designer-name">Mr. Web Designer</span> | All Rights Reserved</p>
     </footer>
-
     <script src="./js/script.js"></script>
 </body>
 

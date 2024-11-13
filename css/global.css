@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 * {
     margin: 0;
@@ -6,27 +5,27 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
+body, html {
+    overflow-x: hidden;
+}
 :root{
     --dark: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
     --light-color:hsl(0, 1%, 24%);
     --light-gray:hsl(0, 2%, 49%);
     --background-gray:hsla(0, 2%, 82%, 0.848);
+    --background-pink: hsla(339, 81%, 94%, 0.704);
+    --background-header: hsla(337, 45%, 73%, 0.704);
     --lighter-gray:hsl(0, 16%, 96%);
     --primary-pink:hsl(350, 86%, 81%);
+    --pink-solid:hsl(330, 85%, 58%);
     --normal-font:1.2rem;
+    --font-medium-weight:600;
     --font-boldy: 900;
 }
-/* @font-face {
-    font-family: 'YourFont'; 
-    src: url('fonts/YourFont-Regular.woff') format('woff');
-    font-weight: normal; 
-    font-style: normal; 
-} */
-
 .row{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 ul{
@@ -45,26 +44,155 @@ p {
     font-size: 1.1rem; 
 }
 
+/* Header Styles */
+header {
+    background-color: var(--white);
+    border-bottom: 2px solid var(--primary-pink);
+    padding: 0rem 10rem;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
 
+.logo img {
+    height: 4rem;
+}
 
+.nav-list {
+    display: flex;
+    gap: 1.5rem;
+}
 
+.trans-head {
+    color: var(--dark);
+    transition: color 0.5s ease, font-size 0.5s ease;
+}
+
+.trans-head:hover,
+.trans-head.active {
+    font-size: larger;
+    color: var(--primary-pink);
+    transition: color 0.5s ease, font-size 0.5s ease;
+
+}
+
+.header-links {
+    display: flex;
+    gap: 1rem;
+}
+
+#nav-toggler {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+/* Responsive Media Queries */
+
+/* Large screens */
+@media (max-width: 1200px) {
+    header {
+        padding: 1rem 5rem;
+    }
+}
+
+/* Medium screens */
+@media (max-width: 992px) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    .logo img {
+        height: 3.5rem;
+    }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 4rem 0rem 4rem;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        left: 1rem;
+        background-color: var(--primary-pink);
+        border-radius: 8px;
+        padding: 2rem;
+        width: calc(100% - 2rem);
+    z-index: 1;
+
+    }
+
+    .nav-list li {
+        background-color: var(--background-pink);
+        width: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .nav-list li a:hover,
+    .nav-list li a.active {
+        color: var(--white);
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    #nav-toggler {
+        display: block;
+        cursor: pointer;
+    }
+
+    .header-links {
+        display: none;
+    }
+}
+/* header for each section */
+.Subject {
+    text-align: center;
+    background-color: hsla(339, 81%, 94%, 0.7);
+    margin-bottom: 3rem;
+    padding: 15px 0;
+    font-size: 2rem;
+    font-weight: var(--font-medium-weight);
+    color: var(--pink-solid); /* تأخذ اللون من ملف الجلوبال */
+}
 /* Animation */
 
 /* Typing Effect */
 .typing-effect {
-    overflow: hidden; 
-    white-space: nowrap; 
-    border-right: 3px solid var(--primary-pink); /* خط متحرك */
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary-pink);
     animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
 }
+
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
+
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: var(--primary-pink); }
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--primary-pink);
+    }
 }
+
 .fade-in-typing {
     opacity: 0;
     transform: translateY(30px);
@@ -76,15 +204,7 @@ p {
     transform: translateY(0);
 }
 
-@keyframes typing {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
+/* حواف الحروف في الأنميشن */
 .fade-in-typing span {
     display: inline-block;
     overflow: hidden;
